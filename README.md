@@ -12,7 +12,7 @@ A FastAPI-based backend app for a mutual fund broker.
 ## Getting Started
 
 ```bash
-git clone <repo_url>
+git clone https://github.com/ramprk556905/mf_app.git
 cd bhive-backend
 cp .env.example .env
 pip install -r requirements.txt
