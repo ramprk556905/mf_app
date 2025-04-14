@@ -1,4 +1,4 @@
-# BHIVE Mutual Fund Backend
+# Mutual Fund Backend
 
 A FastAPI-based backend app for a mutual fund broker.
 
