@@ -5,6 +5,11 @@ from app.main import app
 client = TestClient(app)
 
 def test_register_login_and_portfolio_flow():
+    """
+    Test the end-to-end flow of user registration, login, and portfolio management.
+    Verify user registration and login functionality, including token generation.
+    Test adding and retrieving portfolio entries for the authenticated user.
+    """
     user = {"email": "demo@example.com", "password": "demo123"}
     
     res = client.post("/auth/register", json=user)

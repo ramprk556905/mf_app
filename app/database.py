@@ -11,6 +11,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 def get_db():
+    """
+    Provide a database session for the request lifecycle.
+    Ensure the session is properly closed after use.
+    Yield the session object for database operations.
+    """
     db = SessionLocal()
     try:
         yield db

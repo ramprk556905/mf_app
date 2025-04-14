@@ -12,4 +12,9 @@ app.include_router(portfolio.router, prefix="/portfolio", tags=["Portfolio"])
 
 @app.get("/")
 def root():
+    """
+    Root endpoint for the application.
+    Returns a welcome message to indicate the API is running.
+    Useful for health checks or basic connectivity tests.
+    """
     return {"message": "Welcome to Mutual Fund Backend"}

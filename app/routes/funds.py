@@ -7,6 +7,11 @@ RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 
 @router.post("/schemes/")
 async def get_funds(data: FundRequest):
+    """
+    Fetch mutual fund schemes based on the provided fund family.
+    Sends a GET request to an external API with the specified parameters.
+    Returns the JSON response from the external API.
+    """
     url = "https://latest-mutual-fund-nav.p.rapidapi.com/fetchSchemes"
     headers = {
         "X-RapidAPI-Key": RAPIDAPI_KEY,
