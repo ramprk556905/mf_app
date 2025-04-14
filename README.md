@@ -19,7 +19,5 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 
-.env file will be share in the mail to HR Please refer the mail attachment
-
 to run the test_e2e.py use below command
 PYTHONPATH=. pytest tests
