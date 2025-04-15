@@ -21,3 +21,7 @@ uvicorn app.main:app --reload
 
 to run the test_e2e.py use below command
 PYTHONPATH=. pytest tests
+
+
+## Note
+- We have used SQLite as a database to avoid complexity

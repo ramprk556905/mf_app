@@ -35,7 +35,7 @@ class FundRequest(BaseModel):
     Includes the fund family as a parameter.
     Used for fetching fund schemes.
     """
-    fund_family: str
+    scheme_type: str
 
 class PortfolioOut(BaseModel):
     """

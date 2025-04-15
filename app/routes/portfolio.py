@@ -26,6 +26,7 @@ def add_portfolio(
     Add a new portfolio entry for the authenticated user.
     Save the portfolio details (fund name and current value) to the database.
     Return the newly created portfolio entry.
+    Get the Token from /auth/login endpoint and pass it in the header.
     """
     current_user = get_current_user(token, db)
     entry = models.Portfolio(fund_name=data.fund_name, current_value=data.current_value, user_id=current_user.id)
@@ -40,6 +41,7 @@ def get_portfolio(token: str, db: Session = Depends(get_db)):
     Retrieve all portfolio entries for the authenticated user.
     Filter the portfolio records by the user's ID from the database.
     Return the list of portfolio entries.
+    Get the Token from /auth/login endpoint and pass it in the header.
     """
     current_user = get_current_user(token, db)
     return db.query(models.Portfolio).filter(models.Portfolio.user_id == current_user.id).all()
