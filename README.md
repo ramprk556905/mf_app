@@ -8,6 +8,8 @@ A FastAPI-based backend app for a mutual fund broker.
 - Add/View portfolio
 - Integrate with RapidAPI for open-ended schemes
 - E2E test with pytest
+- ## Note
+- We have used SQLite as a database to avoid complexity and focus on the core functionality of the app.
 
 ## Getting Started
 
@@ -23,5 +25,4 @@ to run the test_e2e.py use below command
 PYTHONPATH=. pytest tests
 
 
-## Note
-- We have used SQLite as a database to avoid complexity
+
